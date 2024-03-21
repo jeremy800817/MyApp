@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /code/app.js
+// @require C:\Users\User\Desktop\sencha\MyApp\app.js

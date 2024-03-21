@@ -101,9 +101,15 @@ Ext.define('MyApp.view.main.Main', {
         }
     }, {
 		title: 'User',
-		iconCls: 'fa-users',
+		iconCls: 'fa-user-tie',
 		items: [{
             xtype: 'userlist'
+        }]
+	}, {
+		title: 'My Panel',
+		iconCls: 'fa-sliders-h',
+		items: [{
+            xtype: 'mypanel'
         }]
 	}]
 });
