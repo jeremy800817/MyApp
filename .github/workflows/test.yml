@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - master
+  pull_request:
+    types: [closed]    
 
 jobs:
   build:
@@ -30,5 +32,6 @@ jobs:
           rm SenchaCmd-7.7.0.36-linux-amd64.sh
 
       - name: Build Sencha App
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           /opt/Sencha/Cmd/7.7.0.36/sencha app build
