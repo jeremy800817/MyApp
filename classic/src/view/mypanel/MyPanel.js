@@ -4,6 +4,6 @@ Ext.define('MyApp.view.mypanel.MyPanel', {
 	
     title: 'My Panel',
     width: '100%',
-    html: '<p>This is my panel</p>',
+    html: '<p>Panel is a container that has specific functionality and structural components that make it the perfect building block for application-oriented user interfaces.</p>',
 });
 
