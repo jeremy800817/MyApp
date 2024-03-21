@@ -40,7 +40,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           rm -rf build/*  # Remove existing files in the build directory
-          cp -rf /home/runner/work/MyApp/MyApp/build/* build/
+          cp -r /home/runner/work/MyApp/MyApp/build/* build/
 
       - name: Upload build artifacts
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
