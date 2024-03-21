@@ -31,4 +31,4 @@ jobs:
 
       - name: Build Sencha App
         run: |
-          sencha app build
+          /opt/Sencha/Cmd/7.7.0.36/sencha app build
