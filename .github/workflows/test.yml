@@ -1,7 +1,7 @@
 name: Build Sencha App
 
 on:
-  pull_request:
+  push:
     branches:
       - master
   pull_request:
