@@ -36,11 +36,6 @@ jobs:
         run: |
           /opt/Sencha/Cmd/7.7.0.36/sencha app build
 
-      - name: Copy build files to repo
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: |
-          cp -r /home/runner/work/MyApp/MyApp/build/production/MyApp/classic/* build/production/MyApp/classic/
-
       - name: Upload build artifacts
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@v2
