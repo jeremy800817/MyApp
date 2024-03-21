@@ -1,0 +1,34 @@
+name: Build Sencha App
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # Additional setup steps as needed
+
+      - name: Install Sencha Cmd
+        run: |
+          wget https://trials.sencha.com/cmd/7.7.0/SenchaCmd-7.7.0.36-linux-amd64.sh.zip -O senchacmd.zip
+          unzip senchacmd.zip
+          rm senchacmd.zip
+          chmod +x SenchaCmd-7.7.0.36-linux-amd64.sh
+          ./SenchaCmd-7.7.0.36-linux-amd64.sh -q -dir /opt/Sencha/Cmd/7.7.0.36 -Dall=true
+          rm SenchaCmd-7.7.0.36-linux-amd64.sh
+
+      - name: Build Sencha App
+        run: |
+          sencha app build
