@@ -107,7 +107,7 @@ Ext.define('MyApp.view.main.Main', {
         }]
 	}, {
 		title: 'My Panel',
-		iconCls: 'fa-sliders-h',
+		iconCls: 'fa-user-check',
 		items: [{
             xtype: 'mypanel'
         }]
