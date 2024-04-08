@@ -25,4 +25,5 @@ jobs:
           git remote add origin_with_token https://github.com/${{ github.repository }}
           git push origin_with_token HEAD:master
         env:
-          GITHUB_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
+
