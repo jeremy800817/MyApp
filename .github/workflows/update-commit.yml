@@ -8,11 +8,13 @@ on:
 jobs:
   append_commit_info:
     runs-on: ubuntu-latest
-    
+   
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+        with:
+          ref: master  # Make sure to checkout the master branch explicitly
+
       - name: Append commit info
         run: |
           echo "$(date +'%Y-%m-%d %H:%M:%S') - $(git log -1 --pretty=%B)" >> update.txt
@@ -20,4 +22,7 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add update.txt
           git commit -m "Auto-append commit info [skip ci]"
-          git push
+          git remote add origin_with_token https://github.com/${{ github.repository }}
+          git push origin_with_token HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.YOUR_PAT_SECRET }}
