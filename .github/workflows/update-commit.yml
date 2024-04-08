@@ -18,7 +18,7 @@ jobs:
       - name: Append commit info
         run: |
           echo "$(date +'%Y-%m-%d %H:%M:%S') - $(git log -1 --pretty=%B)" >> update.txt
-          git config --local user.email "actions@github.com"
+          git config --local user.email "jeremy800817@github.com"
           git config --local user.name "GitHub Actions"
           git add update.txt
           git commit -m "Auto-append commit info [skip ci]"
