@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'MyApp' );
-$image-search-path: '/code/build/production/MyApp/classic/resources';
+$image-search-path: '/home/runner/work/MyApp/MyApp/build/production/MyApp/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
@@ -959,6 +959,7 @@ $include-myapp-view-main-main: dynamic(true);;
 $include-myapp-view-main-maincontroller: dynamic(true);;
 $include-myapp-view-main-mainmodel: dynamic(true);;
 $include-myapp-view-main-user: dynamic(true);;
+$include-myapp-view-mypanel-mypanel: dynamic(true);;
 
 
 /* ======================== ETC ======================== */
