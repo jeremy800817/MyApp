@@ -20,7 +20,8 @@ jobs:
 
       - name: Install Sencha Cmd
         run: |
-          npm install -g @sencha/cmd
+          sudo npm install -g @sencha/cmd
+          sencha --version
           sencha upgrade
 
       - name: Build Sencha App
