@@ -29,3 +29,11 @@ jobs:
 
       - name: Build Sencha App
         run: /opt/Sencha/Cmd/7.7.0.36/sencha app build classic
+
+      - name: Commit and Push Build Files
+        run: |
+          git config --global user.name "jeremy800817"
+          git config --global user.email "jeremy800817@gmail.com"
+          git add .
+          git commit -m "Build Sencha app"
+          git push origin master
