@@ -28,7 +28,7 @@ jobs:
           rm SenchaCmd-7.7.0.36-linux-amd64.sh
 
       - name: Build Sencha App
-        run: /opt/Sencha/Cmd/7.7.0.36/sencha app build classic
+        run: /opt/Sencha/Cmd/7.7.0.36/sencha app build
 
       - name: Commit and Push Build Files
         run: |
