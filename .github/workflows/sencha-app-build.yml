@@ -1,0 +1,27 @@
+name: Sencha App Build
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Sencha Cmd
+        run: |
+          npm install -g @sencha/cmd
+          sencha upgrade
+
+      - name: Build Sencha App
+        run: sencha app build classic
