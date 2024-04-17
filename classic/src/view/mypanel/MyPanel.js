@@ -4,6 +4,6 @@ Ext.define('MyApp.view.mypanel.MyPanel', {
 	
     title: 'My Panel',
     width: '100%',
-    html: '<p>Update 2 from local</p>',
+    html: '<p>update 2</p>',
 });
 
