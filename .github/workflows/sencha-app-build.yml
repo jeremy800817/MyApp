@@ -36,4 +36,4 @@ jobs:
           git config --global user.email "jeremy800817@gmail.com"
           git add .
           git commit -m "Build Sencha app"
-          git push origin master
+          git push origin develop
