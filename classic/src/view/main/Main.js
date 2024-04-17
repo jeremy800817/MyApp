@@ -111,5 +111,11 @@ Ext.define('MyApp.view.main.Main', {
 		items: [{
             xtype: 'mypanel'
         }]
+	}, {
+		title: 'File',
+		iconCls: 'fa-file',
+		items: [{
+            xtype: 'file'
+        }]
 	}]
 });
