@@ -1,0 +1,39 @@
+name: Sencha App Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Sencha Cmd
+        run: |
+          wget https://trials.sencha.com/cmd/7.7.0/SenchaCmd-7.7.0.36-linux-amd64.sh.zip -O senchacmd.zip
+          unzip senchacmd.zip
+          rm senchacmd.zip
+          chmod +x SenchaCmd-7.7.0.36-linux-amd64.sh
+          ./SenchaCmd-7.7.0.36-linux-amd64.sh -q -dir /opt/Sencha/Cmd/7.7.0.36 -Dall=true
+          rm SenchaCmd-7.7.0.36-linux-amd64.sh
+
+      - name: Build Sencha App
+        run: /opt/Sencha/Cmd/7.7.0.36/sencha app build
+
+      - name: Commit and Push Build Files
+        run: |
+          git config --global user.name "jeremy800817"
+          git config --global user.email "jeremy800817@gmail.com"
+          git add .
+          git commit -m "Build Sencha app"
+          git push origin master

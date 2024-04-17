@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /code/app.js
+// @require /home/runner/work/MyApp/MyApp/app.js

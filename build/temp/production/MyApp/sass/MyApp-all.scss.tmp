@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'MyApp' );
-$image-search-path: '/code/build/production/MyApp/modern/resources';
+$image-search-path: '/home/runner/work/MyApp/MyApp/build/production/MyApp/modern/resources';
 $theme-name:  dynamic( 'theme-material' );
 $include-ext-abstractcomponent: dynamic(false);;
 $include-ext-abstractmanager: dynamic(false);;
