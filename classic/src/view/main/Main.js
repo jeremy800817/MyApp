@@ -118,7 +118,7 @@ Ext.define('MyApp.view.main.Main', {
             xtype: 'file'
         }]
 	}, {
-		title: 'List',
+		title: 'Listing',
 		iconCls: 'fa-list',
 		items: [{
             xtype: 'mainlist'
