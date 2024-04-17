@@ -4,6 +4,6 @@ Ext.define('MyApp.view.file.File', {
 	
     title: 'File',
     width: '100%',
-    html: '<p>This is file page 2</p>',
+    html: '<p>New file page</p>'
 });
 
