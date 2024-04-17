@@ -106,7 +106,7 @@ Ext.define('MyApp.view.main.Main', {
             xtype: 'userlist'
         }]
 	}, {
-		title: 'My Panel',
+		title: 'My Panel 2',
 		iconCls: 'fa-user-check',
 		items: [{
             xtype: 'mypanel'
