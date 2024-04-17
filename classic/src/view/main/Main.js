@@ -117,5 +117,11 @@ Ext.define('MyApp.view.main.Main', {
 		items: [{
             xtype: 'file'
         }]
+	}, {
+		title: 'List',
+		iconCls: 'fa-list',
+		items: [{
+            xtype: 'mainlist'
+        }]
 	}]
 });
